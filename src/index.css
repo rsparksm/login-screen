@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.app-body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+}
+.header-body {
+  height: 45px;
+  background-color: darkgray;
+}
+
+.welcome-message {
+  padding-top: 10px;
+}
+
+.login-message {
+  margin-bottom: 10px;
+}
+
+.input-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: darkgray;
+  border-radius: 5%;
+  width: 20%;
+}
+
+.input-parent {
+  display: grid;
+}
+
+.input-field {
+  margin-top: 5px;
+  height: 25px;
+  width: 150px;
+  text-align: center;
+}
+
+.alert {
+  font-size: 10pt;
+  width: 150px;
+}
+
+.valid-pwd {
+  color: green;
+}
+
+.invalid-pwd {
+  color: red;
+}
+
+.submit-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 75px;
+  height: 30px;
+}
