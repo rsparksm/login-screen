@@ -21,10 +21,10 @@ const InputComponent = (props) => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (checkPasswords()) {
       props.setUser(user);
       alert("Form submission successful");
-      e.preventDefault();
     } else {
       alert("Form submission unsuccessful");
     }
