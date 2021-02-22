@@ -20,9 +20,13 @@ const InputComponent = (props) => {
     setPwd2(password);
   };
 
-  const handleButtonClick = () => {
+  const handleSubmit = (e) => {
     if (checkPasswords()) {
       props.setUser(user);
+      alert("Form submission successful");
+      e.preventDefault();
+    } else {
+      alert("Form submission unsuccessful");
     }
   };
 
@@ -36,7 +40,7 @@ const InputComponent = (props) => {
 
   return (
     <div className='input-body'>
-      <div className='input-parent'>
+      <form className='input-parent' onSubmit={handleSubmit}>
         <input
           className='input-field'
           type='usr'
@@ -72,12 +76,11 @@ const InputComponent = (props) => {
               : "Password is invalid or does not match"}
           </div>
         ) : null}
-      </div>
-
-      <button className='submit-button' onClick={handleButtonClick}>
-        {" "}
-        Submit{" "}
-      </button>
+        <button className='submit-button' type='submit' onClick={handleSubmit}>
+          {" "}
+          Submit{" "}
+        </button>
+      </form>
     </div>
   );
 };
