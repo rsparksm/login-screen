@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className='header-body'>
       <div className='welcome-message'>
-        Welcome {props.user.length != 0 ? props.user : "user"}
+        Welcome {props.user ? props.user : "user"}
       </div>
     </div>
   );

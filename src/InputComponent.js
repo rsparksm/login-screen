@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const InputComponent = (props) => {
-  const [user, setUser] = useState([]);
-  const [pwd1, setPwd1] = useState([]);
-  const [pwd2, setPwd2] = useState([]);
+  const [user, setUser] = useState("");
+  const [pwd1, setPwd1] = useState("");
+  const [pwd2, setPwd2] = useState("");
 
   const handleUserNameChange = (e) => {
     let userName = e.target.value;
@@ -23,7 +23,6 @@ const InputComponent = (props) => {
   const handleButtonClick = () => {
     if (checkPasswords()) {
       props.setUser(user);
-      props.setPwd(pwd1);
     }
   };
 
